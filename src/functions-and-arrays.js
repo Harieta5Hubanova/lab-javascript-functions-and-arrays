@@ -78,7 +78,15 @@ const wordsArr = [
   'palace'
 ];
 
-function averageWordLength() {}
+function averageWordLength() {
+  if (averageWordLength.length === 0) {
+    return null;
+  }
+  const totalWordsLength = wordsArr.reduce((sum, word) => {
+    return sum + word.length;
+  }, 0);
+  const averageWord = totalWordsLength / word.length;
+}
 
 // Bonus - Iteration #4.1
 function avg() {}
@@ -98,7 +106,14 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(noDuplicates) {
+  if (noDuplicates.length === 0) {
+    return null;
+  }
+  return noDuplicates.filter((currentValue, currentIndex) =>
+    noDuplicates.indexOf(currentValue !== currentIndex)
+  );
+}
 
 // Iteration #6: Find elements
 const wordsFind = [
@@ -112,7 +127,13 @@ const wordsFind = [
   'disobedience'
 ];
 
-function doesWordExist() {}
+function doesWordExist(wordsFind, word) {
+  if (wordsFind.length === 0) {
+    return null;
+  }
+  if (wordsFind.includes(word)) return true;
+  if (!wordsFind.includes(word)) return false;
+}
 
 // Iteration #7: Count repetition
 const wordsCount = [
@@ -129,7 +150,7 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+function howManyTimes(wordsCount, word) {}
 
 // Iteration #8: Bonus
 const matrix = [
